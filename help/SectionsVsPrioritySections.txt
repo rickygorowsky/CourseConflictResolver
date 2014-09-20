@@ -1,0 +1,27 @@
+Sections vs. Priority Sections
+
+A section is an offering of a course.
+A priority section is a mandatory meeting time for everyone enrolled in the course.
+
+Example: Physics class 
+priority section:   10:00 AM - 10:50 AM MoWeFr    
+           section 1:   11:00 AM - 12:45 PM Mo
+           section 2:   12:00 PM - 1:45 PM  Th
+           section 3:   3:00 PM  - 4:45 PM  We
+
+A student registering for physics can choose to be in section 1, 2, or 3, but
+the student must come to the priority section.
+
+A priority section can't be used without at least one section.  If a course 
+contains a priority section without a section, this program will treat the course
+as if it was empty.
+
+So the student can sign up for any of the following:
+priority section:   10:00 AM - 10:50 AM MoWeFr    
+           section 1:   11:00 AM - 12:45 PM Mo
+       
+priority section:   10:00 AM - 10:50 AM MoWeFr    
+           section 2:   12:00 PM - 1:45 PM  Th
+       
+priority section:   10:00 AM - 10:50 AM MoWeFr    
+           section 3:   3:00 PM  - 4:45 PM  We

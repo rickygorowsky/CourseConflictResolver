@@ -1,0 +1,9 @@
+
+# Compiled code #
+*.class
+
+# Eclipse files #
+.project
+.metadata
+.classpath
+.externalToolBuilders/

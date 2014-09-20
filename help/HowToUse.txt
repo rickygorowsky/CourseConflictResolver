@@ -1,0 +1,22 @@
+How To Use Course Conflict Resolver
+
+Course Conflict Resolver is designed to help a student find the best schedule
+between course offerings.
+
+Start by adding a course and entering its name.  To add an offering make sure 
+the course is selected, then click the "Add Section" or "Add Priority Section" 
+button.  The "Begin Time" and "End Time" fields are fully editable, but you 
+may have to move the cursor around in them to be sure you are editing the 
+minutes and not hours.  Note some fields will not be editable until a section 
+or course is selected.
+
+To calculate all possible schedules, use the checkboxs to check which courses
+and sections you want to consider. The program will not examine unchecked 
+offerings in its calculations. 
+
+Each conflict-free schedule will be printed, along with a basic picture snapshot.
+The picture will mark an 'X' if the offering is inside the hour even for a minute.
+e.g. A course from 5:00PM - 6:00PM will have an 'X' from 5-6 and from 6-7, while
+a course from 5:00PM - 5:59PM will have an 'X' from 5-6 only.
+
+This program saves and loads files with a .schdl extension.
