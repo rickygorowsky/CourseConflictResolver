@@ -11,10 +11,12 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
@@ -329,14 +331,19 @@ public class CourseConflictResolverGUI extends JFrame {
             else if(e.getSource() == svspMenuItem) inputFile = "SectionsVsPrioritySections.txt";
             else if(e.getSource() == aboutMenuItem) inputFile = "About.txt";
             
-            InputStream stream = getClass().getResourceAsStream("/help/" + inputFile);
-            int i;
-            String message = "";
-            try {
-                while((i = stream.read()) != -1) {
-                   message += (char) i;
+            String message = null;
+            try(BufferedReader br = new BufferedReader(new FileReader("help/" + inputFile))) {
+                StringBuilder sb = new StringBuilder();
+                String line = br.readLine();
+
+                while (line != null) {
+                    sb.append(line);
+                    sb.append(System.lineSeparator());
+                    line = br.readLine();
                 }
-            } catch (IOException e1) {
+                message = sb.toString();
+            }
+            catch (IOException e1) {
                 JOptionPane.showMessageDialog(frame, "Error, IO Exception while trying to display help file");
                 e1.printStackTrace();
             }
